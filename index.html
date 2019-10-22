@@ -17,13 +17,16 @@
                 <div class=""><i class="fa fa-envelope-o" aria-hidden="true"></i> yaminkhan017@gmail.com</div>
                 <div class=""></div>
                 <div class=""><i class="fa fa-user-o" aria-hidden="true"> Account</i></div>
-                <div class="row display-block mr-1"><button type="button" class="btn btn-outline-info"><i class="fa fa-cart-plus"></i> My Cart<span class="badge badge-light float-left"><sup>4</sup></span> - $0.00 </button></div>
+                <div class="d-flex flex-row-reverse">
+                <div class="row display-block mr-1"><button type="button" class="btn btn-outline-info btn-cart"><i class="fa fa-cart-plus"></i> My Cart<span class="badge badge-light float-left"><sup>4</sup></span> - $0.00 </button></div>
+                <div class="row display-block mr-5"><button type="button" class="btn btn-outline-success btn-add"><i class="fa fa-plus"></i> Add New<span class="badge badge-light float-left"></button></div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-black shadow-lg">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-                    <a class="navbar-brand" href="#">Navbar</a>
+    <div class="container-fluid text-light bg-black shadow-lg">
+            <nav class="navbar navbar-expand-lg navbar-light bg-black">
+                    <a class="navbar-brand" href="index.html">ORBIT TECH</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -31,7 +34,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                       <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="#">Link</a>
@@ -54,6 +57,7 @@
                       <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <!--<div class="row display-block mr-1 ml-5"><button type="button" class="btn btn-outline-info btn-cart"><i class="fa fa-cart-plus"></i> My Cart<span class="badge badge-light float-left"><sup>4</sup></span> - $0.00 </button></div>-->
                       </form>
                     </div>
                   </nav>
@@ -67,7 +71,7 @@
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="images/slide5.jpg" class="d-block w-70" alt="...">
+                  <img src="images/slide1.jpg" class="d-block w-70" alt="...">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>First slide label</h5>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -87,6 +91,20 @@
                     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                   </div>
                 </div>
+                <div class="carousel-item">
+                  <img src="images/slide4.jpg" class="d-block w-70" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/slide5.jpg" class="d-block w-70" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  </div>
+                </div>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -98,18 +116,64 @@
               </a>
             </div>
     </div>
-    <div class="container mt-5 carr-item mb-5">
-            <div class="card shadow-lg border-success" style="width: 18rem;">
-                    <img src="images/cpu.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Processor</h5>
+    <div class="row mt-5 carr-item mb-5 ml-5 justify-content-center" >
+        <div class="card shadow-lg border-success m-3" style="width: 18rem;">
+            <img src="images/cpu.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Processor</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <div class="container-fluid row ">
-                      <div class="container col-md-6"><p>200 $</p></div>
+                <div class="container-fluid row ">
+                    <div class="container col-md-6"><p>200 $</p></div>
                       <a href="#" class="btn btn-outline-primary col-md-6 d-blo">Add to Cart</a>
+                </div>
+            </div>
+         </div>
+         <div class="card shadow-lg border-success m-3 justify-content-center" style="width: 18rem;">
+                <img src="images/cooler.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Processor</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="container-fluid row ">
+                        <div class="container col-md-6"><p>200 $</p></div>
+                          <a href="#" class="btn btn-outline-primary col-md-6 d-blo">Add to Cart</a>
                     </div>
+                </div>
+             </div>
+
+             <div class="card shadow-lg border-success m-3" style="width: 18rem;">
+                    <img src="images/cooler.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Processor</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="container-fluid row ">
+                            <div class="container col-md-6"><p>200 $</p></div>
+                              <a href="#" class="btn btn-outline-primary col-md-6 d-blo">Add to Cart</a>
+                        </div>
                     </div>
-                  </div>
+                 </div>
+                 <div class="card shadow-lg border-success m-3 " style="width: 18rem;">
+                        <img src="images/cooler.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Processor</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="container-fluid row ">
+                                <div class="container col-md-6"><p>200 $</p></div>
+                                  <a href="#" class="btn btn-outline-primary col-md-6 d-blo">Add to Cart</a>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="card shadow-lg border-success m-3" style="width: 18rem;">
+                            <img src="images/cooler.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Processor</h5>
+                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="container-fluid row ">
+                                    <div class="container col-md-6"><p>200 $</p></div>
+                                      <a href="#" class="btn btn-outline-primary col-md-6 d-blo">Add to Cart</a>
+                                </div>
+                            </div>
+                         </div>
+             
     </div>
 
     

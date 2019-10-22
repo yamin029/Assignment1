@@ -1,7 +1,11 @@
 .bg-black{
-    background-color:#302e33;
+    background-color:#b2ccce;
 }
 .d-block{
     height: 650px;
     width: 100%;
+}
+.cart-image{
+    height:auto ;
+    width: 75px;
 }
