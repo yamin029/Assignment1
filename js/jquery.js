@@ -4,3 +4,6 @@ $('.btn-add').click(function(){
 $('.btn-cart').click(function(){
     window.open("cart.html","_self")
 })
+$('.card-img-top').click(function(){
+    window.open("singleview.html","_self")
+})
