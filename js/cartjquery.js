@@ -3,7 +3,7 @@ var localStorageproduct = JSON.parse(window.localStorage.getItem('products'))
 //console.log(localStorageproduct)
 //console.log(localStorageproduct[0].img)
 cart_items = JSON.parse(window.localStorage.getItem('cart_items'))
-//console.log(cart_items)
+console.log(cart_items)
 $.each(cart_items,function(i,val){ 
     //console.log("cart item -"+cart_items[i])
     $.each(localStorageproduct,function(j,val){
