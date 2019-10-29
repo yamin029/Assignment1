@@ -4,6 +4,9 @@ $('.btn-add').click(function(){
 $('.btn-cart').click(function(){
     window.open("cart.html","_self")
 })
+cart_items = JSON.parse(window.localStorage.getItem('cart_items'))
+var cart_item_length = cart_items.length
+$('.btn-cart').children("span").children("sup").text(cart_item_length)
 var products =[]
 
 // var products = [
@@ -16,34 +19,26 @@ var products =[]
 //  ]
  //console.log(products)
  //window.localStorage.setItem('products',JSON.stringify(products))
- var localStorageproduct = JSON.parse(window.localStorage.getItem('products'))
- console.log(localStorageproduct)
+ var products = JSON.parse(window.localStorage.getItem('products'))
+ console.log(products)
  
- $.each(localStorageproduct,function(i,val){
-     var insertproduct = $('<div class="card shadow-lg border-success m-3" style="width: 18rem;"><img src="" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title"></h5><p class="card-text"></p><div class="container-fluid row "><div class="container col-md-6"><p></p></div><a href="#" class="btn btn-outline-primary col-md-6 d-blo">Add to Cart</a></div></div></div>')
-     insertproduct.children("img").attr('src',localStorageproduct[i].img)
-     insertproduct.children("div").children("h5").text(localStorageproduct[i].title)
+ $.each(products,function(i,val){
+     var insertproduct = $('<div class="card shadow-lg border-success m-3" style="width: 18rem;"><img src="" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title"></h5><p class="card-text"></p><div class="container-fluid row "><div class="container col-md-6"><p></p></div><a class="btn btn-outline-primary col-md-6 d-blo btn-add-to-card">Add to Cart</a></div></div></div>')
+     insertproduct.children("img").attr('src',products[i].img)
+     insertproduct.children("div").children("h5").text(products[i].title)
      //insertproduct.children("div").children("p").text(localStorageproduct[i].description)
-     insertproduct.children("div").children("div").children("div").children("p").text(localStorageproduct[i].price + "$")
+     insertproduct.children("div").children("div").children("div").children("p").text(products[i].price + "$")
      $('.productsview').append(insertproduct)
  })
  let valueforsingleview
  $('.card-img-top').click(function(){
-    console.log("card-img-top")
-    valueforsingleview = $(this).parent().html()
-    window.open("singleview.html","")
-    //valueforsingleview = window.opener["valueforsingleview"]
-    console.log(valueforsingleview)
+    //console.log("card-img-top")
+    valueforsingleview = $(this).next().children("h5").text()
     window.localStorage.setItem("valueforsingleview",JSON.stringify(valueforsingleview))
-    setsingleview()
-
-    //$('.single-view-div').html(valueforsingleview)
-})
-function setsingleview(){
-    valueforsingleview = JSON.parse(window.localStorage.getItem("valueforsingleview"))
-    $('.single-view-div').append(valueforsingleview)
+    window.open("singleview.html","_self")
     console.log(valueforsingleview)
-}
+})
+
  $('.btn-submit-add-new-product').click(function(){
      console.log("submit button clicked")
      var title = $('#input-title').val()
@@ -54,4 +49,12 @@ function setsingleview(){
      console.log(products)
      
      window.localStorage.setItem('products',JSON.stringify(products))
+ })
+ var cart_items = []
+ $('.btn-add-to-card').click(function(){
+    var cart_item = $(this).parent().parent().children("h5").text()
+    
+    cart_items = JSON.parse(window.localStorage.getItem('cart_items'))
+    cart_items.push(cart_item)
+    window.localStorage.setItem('cart_items',JSON.stringify(cart_items))
  })
