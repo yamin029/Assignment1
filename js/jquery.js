@@ -57,4 +57,5 @@ var products =[]
     cart_items = JSON.parse(window.localStorage.getItem('cart_items'))
     cart_items.push(cart_item)
     window.localStorage.setItem('cart_items',JSON.stringify(cart_items))
+    location.reload(true)
  })

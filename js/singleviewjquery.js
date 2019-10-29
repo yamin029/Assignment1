@@ -7,7 +7,7 @@ $.each(localStorageproduct,function(i,val){
     //console.log(localStorageproduct[i].title)
     if((localStorageproduct[i].title) == single_product_tilte)
     {
-        var content = $('<div class="row no-gutters"><div class="col-md-4"><img src="" class="card-img" alt="..."></div><div class="col-md-8"><div class="card-body"><h5 class="card-title"></h5><p class="card-text"></p></div></div><div class="col-md-8 d-flex flex-row-reverse "><a href="#" class="btn btn-outline-primary col-md-6 d-blo">Add to Cart</a></div></div>')
+        var content = $('<div class="row no-gutters"><div class="col-md-4"><img src="" class="card-img" alt="..."></div><div class="col-md-8"><div class="card-body"><h5 class="card-title"></h5><p class="card-text"></p></div></div><div class="col-md-8 d-flex flex-row-reverse "><a href="#" class="btn btn-outline-primary col-md-6 d-blo btn-add-to-card">Add to Cart</a></div></div>')
         content.children('.col-md-4').children("img").attr("src",localStorageproduct[i].img)
         content.children('.col-md-4').next().children().children("h5").text(localStorageproduct[i].title)
         content.children('.col-md-4').next().children().children("p").text(localStorageproduct[i].description)
@@ -15,3 +15,11 @@ $.each(localStorageproduct,function(i,val){
         window.localStorage.setItem('valueforsingleview',null)
     }
 })
+
+$('.btn-add-to-card').click(function(){
+    var cart_item = $(this).parent().prev().children().children("h5").text()
+    
+    cart_items = JSON.parse(window.localStorage.getItem('cart_items'))
+    cart_items.push(cart_item)
+    window.localStorage.setItem('cart_items',JSON.stringify(cart_items))
+ })
