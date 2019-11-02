@@ -3,7 +3,7 @@ var localStorageproduct = JSON.parse(window.localStorage.getItem('products'))
 //console.log(localStorageproduct)
 //console.log(localStorageproduct[0].img)
 cart_items = JSON.parse(window.localStorage.getItem('cart_items'))
-console.log(cart_items[0].title)
+//console.log(cart_items[0].title)
 $.each(cart_items,function(i,val){ 
     console.log("cart item -"+cart_items[i].title)
     $.each(localStorageproduct,function(j,val){
@@ -15,15 +15,17 @@ $.each(cart_items,function(i,val){
             cart_item.children("div:first-child").children().children("img").attr("src",localStorageproduct[j].img)
             cart_item.children("div:first-child").children().children("span").text(localStorageproduct[j].title)
             //var total_price_interms_of_quantity = localStorageproduct[j].price *
-            cart_item.children("div:first-child").next().children("span").text(localStorageproduct[j].price )
+            cart_item.children("div:first-child").next().children("span").text(parseFloat(localStorageproduct[j].price) * parseFloat(cart_items[i].quantity) )
             cart_item.children("div:first-child").next().next().children().children("input").val(cart_items[i].quantity)
             $('.cart-item-main-div').append(cart_item)
+            //console.log( parseFloat(cart_items[i].price))
 
         }
     })   
     
 })
 $('.cart-quantity-input').blur(function(){
+    
     var total_price_interms_of_quantity = $(this).parent().parent().prev().children("span").text()
     //console.log(" ->" + total_price_interms_of_quantity)
     var quantiy_per_item = $(this).val()
@@ -31,12 +33,26 @@ $('.cart-quantity-input').blur(function(){
     //console.log( " ="+ total_price_interms_of_quantity)
     $(this).parent().parent().prev().children("span").text(total_price_interms_of_quantity)
 
-    var sum = 0 
-    $('.cart-price-span').each(function(){
-     sum += parseFloat($(this).text())
-    })
-    $('.cart-tatal-price').text(sum + '$')
+    // var sum = 0 
+    // $('.cart-price-span').each(function(){
+    //  sum += parseFloat($(this).text())
+    // })
+    // $('.cart-tatal-price').text(sum + '$')
     //console.log(sum)
+
+    var item_title = $(this).parent().parent().prev().prev().children().children("span").text()
+    
+    cart_items = JSON.parse(window.localStorage.getItem('cart_items'))
+    $.each(cart_items,function(i,val){
+        if(cart_items[i].title == item_title){
+            //console.log(item_title)
+            cart_items[i].quantity = quantiy_per_item
+            //console.log(item_title)
+            window.localStorage.setItem("cart_items",JSON.stringify(cart_items))
+        }
+    })
+    location.reload(true)
+
 })
 $('.cart-remove-btn').click(function(){
     remove_cart_items = JSON.parse(window.localStorage.getItem('cart_items'))
