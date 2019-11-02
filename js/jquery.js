@@ -73,14 +73,16 @@ $('.btn-cart').children("span").children("sup").text(cart_item_length)
  var cart_items = []
  $('.btn-add-to-card').click(function(){
     var cart_item = []
-    cart_item = $(this).parent().parent().children("h5").text()
+    var cart_item_title = $(this).parent().parent().children("h5").text()
+    var cart_item_quantity = '1'
+    //cart_item.push({tite:cart_item_title,quantity:cart_item_quantity})
     
     cart_items = JSON.parse(window.localStorage.getItem('cart_items'))
     if(cart_items == null){
-        cart_items = [cart_item]
+        cart_items = [{title:cart_item_title,quantity:cart_item_quantity}]
     }
     else{
-        cart_items.push(cart_item)
+        cart_items.push({title:cart_item_title,quantity:cart_item_quantity})
     }
     
     window.localStorage.setItem('cart_items',JSON.stringify(cart_items))
