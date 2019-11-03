@@ -7,5 +7,9 @@ Then there is a slider and then the product view section. On each product there 
 In this add view Users can add a new procuct by inputing 5 paramiter and the hint or way to give input is given in each input field. After input all paramiter if submit button clicked then that product will be added in the home page and also local storage will be updated
 
 
-![cart](https://user-images.githubusercontent.com/55071387/68087153-1f3d7800-fe7d-11e9-938f-68a86ed4e023.PNG)
 ![singleview](https://user-images.githubusercontent.com/55071387/68087156-2b293a00-fe7d-11e9-93e8-1a952a7c59de.PNG)
+Users can see the product specification of the particular product and also can add to cart.
+
+
+![cart](https://user-images.githubusercontent.com/55071387/68087153-1f3d7800-fe7d-11e9-938f-68a86ed4e023.PNG)
+In cart view we can see all product that added to cart. we can increase or decrease each product quantity and all remove that particular product from cart. In every event local storage will be updated.
