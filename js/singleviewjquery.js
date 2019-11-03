@@ -17,9 +17,26 @@ $.each(localStorageproduct,function(i,val){
 })
 
 $('.btn-add-to-card').click(function(){
-    var cart_item = $(this).parent().prev().children().children("h5").text()
+    // var cart_item = $(this).parent().prev().children().children("h5").text()
+    
+    // cart_items = JSON.parse(window.localStorage.getItem('cart_items'))
+    // cart_items.push(cart_item)
+    // window.localStorage.setItem('cart_items',JSON.stringify(cart_items))
+
+    ///////////////////////////////////////////////////////
+    var cart_item = []
+    var cart_item_title = $(this).parent().prev().children().children("h5").text() //$(this).parent().parent().children("h5").text()
+    var cart_item_quantity = '1'
+    //cart_item.push({tite:cart_item_title,quantity:cart_item_quantity})
     
     cart_items = JSON.parse(window.localStorage.getItem('cart_items'))
-    cart_items.push(cart_item)
+    if(cart_items == null){
+        cart_items = [{title:cart_item_title,quantity:cart_item_quantity}]
+    }
+    else{
+        cart_items.push({title:cart_item_title,quantity:cart_item_quantity})
+    }
+    
     window.localStorage.setItem('cart_items',JSON.stringify(cart_items))
+    window.open("cart.html","_self")
  })
