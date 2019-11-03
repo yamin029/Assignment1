@@ -1,3 +1,5 @@
+
+
 ![home](https://user-images.githubusercontent.com/55071387/68087125-e56c7180-fe7c-11e9-9a58-536e3a13049a.PNG)
 This is the home page. Here the upper nevigation bar, we can see two button one for add a new item and sencond one for the cart view.
 Then there is a slider and then the product view section. On each product there is a button to add to cart and we can see the product specification by clicking on each product.
