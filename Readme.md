@@ -1,5 +1,5 @@
 ORBITTECH
-dynamic and offline e-commerce website
+dynamic and responsive offline e-commerce website
 link:- https://orbittech.herokuapp.com/index.html
 
 ![home](https://user-images.githubusercontent.com/55071387/68087125-e56c7180-fe7c-11e9-9a58-536e3a13049a.PNG)
