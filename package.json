@@ -1,0 +1,19 @@
+{
+  "name": "webappproject",
+  "version": "1.0.0",
+  "description": "ORBITTECH dynamic and responsive offline e-commerce website link:- https://orbittech.herokuapp.com/index.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yamin029/Assignment1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yamin029/Assignment1/issues"
+  },
+  "homepage": "https://github.com/yamin029/Assignment1#readme"
+}
